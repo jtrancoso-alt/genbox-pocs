@@ -1,29 +1,53 @@
-📄 PoC: Análisis de Licitaciones y Generación de Planes (RFP Engine)
-Cliente: Iman Temporing | Estado: Finalizado / Validación de Negocio
+# 📄 PoC: Análisis de Licitaciones y Generación de Planes (RFP Engine)
 
-🎯 El Desafío
-Iman Temporing gestiona licitaciones (RFPs) de gran volumen donde el error humano en la lectura de pliegos puede suponer la exclusión del concurso o pérdidas económicas. El objetivo es automatizar la disección de estos documentos y generar automáticamente uno de los entregables más críticos: el Plan de Formación.
+**Cliente:** Iman Temporing | **Estado:** `Finalizado` / `Validación de Negocio`
 
-🏗️ Arquitectura del Sistema (Multi-Agente Especializado)
-La solución utiliza una arquitectura de Agentes de Extracción Estructurada. En lugar de un asistente genérico, se han diseñado 5 perfiles que analizan el documento en paralelo:
+---
 
-1. Agentes de Disección (Análisis de Pliegos)
-   Analista General: Extrae la "foto fija" (Importes, fechas de presentación, solvencia técnica/económica y prórrogas).
+## 🎯 El Desafío
 
-Analista Técnico: Se centra en la ejecución (Personal a subrogar, medios materiales, número de páginas permitidas y obligaciones operativas).
+Iman Temporing gestiona licitaciones (**RFPs**) de gran volumen donde el error humano en la lectura de pliegos puede suponer la exclusión del concurso o pérdidas económicas significativas.
 
-Analista Administrativo: Desglosa la burocracia (Contenido exacto de los Sobres A, B y C, anexos necesarios y gestión de lotes).
+El objetivo de esta PoC fue validar el uso de **IA Generativa** para:
 
-Analista de Fórmulas: El "matemático" del grupo. Extrae criterios de puntuación y traduce las fórmulas de adjudicación (ej. fórmulas de baja temerosa o precio).
+- **Automatizar la disección** de documentos complejos.
+- **Detectar riesgos** tempranos.
+- **Generar entregables críticos**, específicamente el **Plan de Formación**, de forma coherente y alineada con la normativa.
 
-2. Agente de Generación (Redactor de Formaciones)
-   Misión: Crear un Plan de Formación de +20 páginas basado en los requisitos del pliego.
+---
 
-Lógica RAG: Utiliza la herramienta contenido cursos para nutrirse de una base de conocimiento interna de IMAN y asegurar que la oferta es realista y cumple con la normativa vigente.
+## 🏗️ Arquitectura del Sistema (Multi-Agente)
 
-📚 Base de Conocimiento (RAG)
-El sistema no solo lee el pliego, sino que contrasta la información con dos fuentes maestras:
+En lugar de un asistente genérico, se diseñó una arquitectura de **Agentes de Extracción Estructurada** que analizan el documento en paralelo para garantizar la máxima precisión.
 
-Cuadro de Características del Acuerdo Marco: Para validar lotes y requisitos de solvencia pre-acordados.
+### 1. Fase de Disección (Análisis de Pliegos)
 
-Catálogo de Cursos IMAN: Para que el "Redactor de Formaciones" proponga cursos reales con objetivos y duraciones precisas.
+- **Analista General:** Extrae la "foto fija" del proyecto (Importes, fechas de presentación, solvencia técnica/económica y prórrogas).
+- **Analista Técnico:** Se centra en la ejecución operativa (Personal a subrogar, medios materiales, límites de páginas y obligaciones).
+- **Analista Administrativo:** Desglosa la "burocracia" (Contenido exacto de los Sobres A, B y C, anexos requeridos y gestión de lotes).
+- **Analista de Fórmulas:** El perfil matemático. Identifica criterios de puntuación y traduce las fórmulas de adjudicación (bajas temerarias, cálculos de precio, etc.).
+
+### 2. Fase de Generación (Redactor de Formaciones)
+
+- **Misión:** Creación de un **Plan de Formación de +20 páginas** basado estrictamente en los requisitos del pliego.
+- **Lógica RAG:** Se integra con la base de conocimiento de IMAN para asegurar que la oferta es realista y cumple con los estándares internos de la compañía.
+
+---
+
+## 📚 Base de Conocimiento (RAG)
+
+Para evitar alucinaciones y asegurar la calidad técnica, el sistema contrasta el pliego con dos fuentes maestras:
+
+> [!IMPORTANT]
+> **Fuentes de Verificación:**
+>
+> 1. **Cuadro de Características del Acuerdo Marco:** Utilizado para validar lotes y requisitos de solvencia pre-acordados.
+> 2. **Catálogo de Cursos IMAN:** Permite al "Redactor de Formaciones" proponer cursos reales con objetivos, contenidos y duraciones precisas.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Orquestador:** Genbox AI.
+- **Modelos:** Claude 3.5 Sonnet (Recomendado para análisis legal/técnico).
+- **Capacidades:** Procesamiento de PDF, RAG y extracción de entidades.
