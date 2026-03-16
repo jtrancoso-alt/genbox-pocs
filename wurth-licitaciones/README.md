@@ -119,7 +119,13 @@ Resultado estimado: 300 requisitos × 10.000 productos en ~2 minutos.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## � Informe de Ejemplo
+
+👉 [Ver informe HTML renderizado](https://htmlpreview.github.io/?https://github.com/jtrancoso-alt/genbox-pocs/blob/main/wurth-licitaciones/assets/informe-ejemplo.html)
+
+---
+
+## �🛠️ Stack Tecnológico
 
 - **Orquestador:** Pipeline Python con 5 agentes Genbox.
 - **Modelos:** Claude 3.5 Haiku + Claude 3.5 Sonnet (AWS Bedrock vía Genbox).
