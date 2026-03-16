@@ -4,11 +4,12 @@ Este repositorio centraliza el conocimiento, los prompts y la arquitectura de la
 
 ## 📊 Resumen de Proyectos
 
-| Proyecto                     | Cliente         | Objetivo                                                                                            | Stack Principal              | Estado        |
-| :--------------------------- | :-------------- | :-------------------------------------------------------------------------------------------------- | :--------------------------- | ------------- |
-| **Sol Naciente: Pedidos**    | Toyota Canarias | Consulta de estado de pedidos en lenguaje natural mediante integración directa con SQL.             | Amazon Nova Pro/Micro        | Finalizado    |
-| **Sol Naciente: Tasaciones** | Toyota Canarias | Automatización de la tasación de vehículos mediante visión artificial y pipeline de 4 agentes.      | Claude 3.5 Sonnet + Nova Pro | 🚀 Producción |
-| **Iman Temporing**           | Iman Temporing  | Análisis de riesgos en pliegos de licitación (RFP) y generación de planes de formación automáticos. | Claude 3.5 Sonnet            | Finalizado    |
+| Proyecto                     | Cliente         | Objetivo                                                                                                                                           | Stack Principal              | Estado        |
+| :--------------------------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- | ------------- |
+| **Sol Naciente: Pedidos**    | Toyota Canarias | Consulta de estado de pedidos en lenguaje natural mediante integración directa con SQL.                                                            | Amazon Nova Pro/Micro        | Finalizado    |
+| **Sol Naciente: Tasaciones** | Toyota Canarias | Automatización de la tasación de vehículos mediante visión artificial y pipeline de 4 agentes.                                                     | Claude 3.5 Sonnet + Nova Pro | 🚀 Producción |
+| **Iman Temporing**           | Iman Temporing  | Análisis de riesgos en pliegos de licitación (RFP) y generación de planes de formación automáticos.                                                | Claude 3.5 Sonnet            | Finalizado    |
+| **Würth: Licitaciones**      | Würth España    | Análisis de viabilidad de licitaciones: extracción de materiales, matching semántico contra catálogo, comparativa de precios y scorecard Go/No-Go. | Claude 3.5 Haiku + Sonnet    | Finalizado    |
 
 ## 🛠️ Herramientas Comunes
 
